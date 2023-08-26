@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.budgetapp.R
 import com.example.budgetapp.common.viewBinding
 import com.example.budgetapp.data.model.IncomeExpense
@@ -17,12 +18,22 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class SummaryFragment : Fragment(R.layout.fragment_summary) {
+class SummaryFragment : Fragment() {
 
-    private val binding by viewBinding(FragmentSummaryBinding::bind)
+    private lateinit var binding: FragmentSummaryBinding
     private val summaryAdapter by lazy {SummaryAdapter(::onSummaryClick, ::onDeleteClick)}
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
+    private val args by navArgs<SummaryFragmentArgs>()
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentSummaryBinding.inflate(inflater,container,false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,13 +45,13 @@ class SummaryFragment : Fragment(R.layout.fragment_summary) {
             recyclerView.adapter = summaryAdapter
 
             ivSignOut.setOnClickListener {
-                Toast.makeText(requireContext(), "Clicked", Toast.LENGTH_SHORT).show()
                 auth.signOut()
-                findNavController().navigate(R.id.summaryToSignIn)
+                findNavController().navigate(R.id.summaryToSignUp)
             }
             btnAdd.setOnClickListener {
                 findNavController().navigate(R.id.summaryToAddEditFragment)
             }
+            tvUsername.text = args.nameId
         }
         listenBudget()
     }
@@ -71,7 +82,7 @@ class SummaryFragment : Fragment(R.layout.fragment_summary) {
                         tvTotalBudget.text = "+${totalBudget} ₺"
                         tvTotalBudget.setTextColor(Color.rgb(50,205,50))
                     } else {
-                        tvTotalBudget.text = "-${totalBudget} ₺"
+                        tvTotalBudget.text = "${totalBudget} ₺"
                         tvTotalBudget.setTextColor(Color.RED)
                     }
                 }
@@ -80,7 +91,7 @@ class SummaryFragment : Fragment(R.layout.fragment_summary) {
         }
     }
 
-    private fun deleteNote(docId: String) {
+    private fun deleteBudget(docId: String) {
         db.collection("budget").document(docId)
             .delete()
             .addOnSuccessListener {
@@ -96,6 +107,6 @@ class SummaryFragment : Fragment(R.layout.fragment_summary) {
     }
 
     private fun onDeleteClick(docId: String) {
-        deleteNote(docId)
+        deleteBudget(docId)
     }
 }

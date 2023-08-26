@@ -1,8 +1,8 @@
 package com.example.budgetapp.ui.signup
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.budgetapp.R
 import com.example.budgetapp.common.viewBinding
@@ -11,6 +11,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 

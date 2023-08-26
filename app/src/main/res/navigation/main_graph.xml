@@ -32,22 +32,40 @@
         android:label="fragment_summary"
         tools:layout="@layout/fragment_summary" >
         <action
-            android:id="@+id/summaryToSignIn"
-            app:destination="@id/signInFragment" />
-        <action
             android:id="@+id/summaryToAddEditFragment"
             app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/summaryToSignUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/summaryToSignIn"
+            app:destination="@id/signInFragment" />
+        <argument
+            android:name="NameId"
+            app:argType="string"
+            android:defaultValue="ZxK"/>
     </fragment>
     <fragment
         android:id="@+id/expenseFragment"
         android:name="com.example.budgetapp.ui.expense.ExpenseFragment"
         android:label="fragment_expense"
-        tools:layout="@layout/fragment_expense" />
+        tools:layout="@layout/fragment_expense" >
+        <action
+            android:id="@+id/expenseToAddEdit"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/expenseToSignIn"
+            app:destination="@id/signInFragment" />
+    </fragment>
     <fragment
         android:id="@+id/incomeFragment"
         android:name="com.example.budgetapp.ui.income.IncomeFragment"
         android:label="fragment_income"
-        tools:layout="@layout/fragment_income" />
+        tools:layout="@layout/fragment_income" >
+        <action
+            android:id="@+id/incomeToAddEdit"
+            app:destination="@id/addEditFragment" />
+    </fragment>
     <dialog
         android:id="@+id/addEditFragment"
         android:name="com.example.budgetapp.ui.addedit.AddEditFragment"

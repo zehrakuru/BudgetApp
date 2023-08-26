@@ -25,7 +25,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         auth = Firebase.auth
 
         auth.currentUser.let {
-          findNavController().navigate(R.id.signInToSummary)
+            findNavController().navigate(R.id.signInToSummary)
         }
 
         with(binding) {
