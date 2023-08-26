@@ -18,7 +18,7 @@ Up School'un verdiği altıncı ödev; "Cüzdan" Uygulaması.
 
 | Income Screen             | Income Budget added       |
 | ------------------------- | ------------------------- |
-| ![Screenshot 2023-08-26 191232](https://github.com/zehrakuru/BudgetApp/assets/74616481/3b0890a1-45c5-46d7-a059-6a1e6ac5a7ec) | ![Screenshot 2023-08-26 191036](https://github.com/zehrakuru/BudgetApp/assets/74616481/e629c80f-c0e0-4cd0-a512-2291588ac80d) |
+| ![Screenshot 2023-08-26 191036](https://github.com/zehrakuru/BudgetApp/assets/74616481/e629c80f-c0e0-4cd0-a512-2291588ac80d) | ![Screenshot 2023-08-26 191232](https://github.com/zehrakuru/BudgetApp/assets/74616481/3b0890a1-45c5-46d7-a059-6a1e6ac5a7ec) |
 
 # Expense Screen
 
