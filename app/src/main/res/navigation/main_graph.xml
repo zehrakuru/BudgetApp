@@ -30,7 +30,14 @@
         android:id="@+id/summaryFragment"
         android:name="com.example.budgetapp.ui.summary.SummaryFragment"
         android:label="fragment_summary"
-        tools:layout="@layout/fragment_summary" />
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/summaryToSignIn"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/summaryToAddEditFragment"
+            app:destination="@id/addEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/expenseFragment"
         android:name="com.example.budgetapp.ui.expense.ExpenseFragment"
@@ -41,4 +48,15 @@
         android:name="com.example.budgetapp.ui.income.IncomeFragment"
         android:label="fragment_income"
         tools:layout="@layout/fragment_income" />
+    <dialog
+        android:id="@+id/addEditFragment"
+        android:name="com.example.budgetapp.ui.addedit.AddEditFragment"
+        android:label="fragment_add_edit"
+        tools:layout="@layout/fragment_add_edit" >
+        <argument
+            android:name="incomeExpense"
+            app:argType="com.example.budgetapp.data.model.IncomeExpense"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </dialog>
 </navigation>
