@@ -20,3 +20,12 @@ Up School'un verdiği altıncı ödev; "Cüzdan" Uygulaması.
 | ------------------------- | ------------------------- |
 | ![Screenshot 2023-08-26 191232](https://github.com/zehrakuru/BudgetApp/assets/74616481/3b0890a1-45c5-46d7-a059-6a1e6ac5a7ec) | ![Screenshot 2023-08-26 191036](https://github.com/zehrakuru/BudgetApp/assets/74616481/e629c80f-c0e0-4cd0-a512-2291588ac80d) |
 
+# Expense Screen
+
+| Expense Screen            | Expense Budget deleted    |
+| ------------------------- | ------------------------- |
+| ![Screenshot 2023-08-26 191351](https://github.com/zehrakuru/BudgetApp/assets/74616481/dee2a831-a10a-430c-b17d-abb8374bf9b9) | ![Screenshot 2023-08-26 191408](https://github.com/zehrakuru/BudgetApp/assets/74616481/76607eb8-03c2-4496-bebd-fffcebe2796c) |
+
+
+
+ 
