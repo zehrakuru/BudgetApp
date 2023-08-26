@@ -27,5 +27,18 @@ Up School'un verdiği altıncı ödev; "Cüzdan" Uygulaması.
 | ![Screenshot 2023-08-26 191351](https://github.com/zehrakuru/BudgetApp/assets/74616481/dee2a831-a10a-430c-b17d-abb8374bf9b9) | ![Screenshot 2023-08-26 191408](https://github.com/zehrakuru/BudgetApp/assets/74616481/76607eb8-03c2-4496-bebd-fffcebe2796c) |
 
 
+# Add or Edit (Bottom Sheet Dialog Fragment) Screens
 
+| Add Screen                | Expense Edit Screen       | Income Edit Screen   |
+| ------------------------- | ------------------------- | ---------------------|
+| ![Screenshot 2023-08-26 191011](https://github.com/zehrakuru/BudgetApp/assets/74616481/452ae371-1255-4923-b2f4-7110b8e54b39) | ![Screenshot 2023-08-26 190902](https://github.com/zehrakuru/BudgetApp/assets/74616481/ce28de23-791d-4be4-9146-97ab4d8dcfaa) | ![Screenshot 2023-08-26 190802](https://github.com/zehrakuru/BudgetApp/assets/74616481/4d2bd466-dbd9-43b8-a440-0ceea5623b1a) | 
+
+# Structures
+
+Kullanılan yapılar aşağıda listelenmiştir.
+
+- Navigation
+- ViewBinding
+- Firebase
+- BottomSheetDialogFragment
  
